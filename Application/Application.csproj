@@ -7,4 +7,17 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Features\" />
+      <Folder Include="Services\Repositories\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="13.0.1" />
+      <PackageReference Include="MediatR" Version="12.3.0" />
+      <PackageReference Include="NArchitecture.Core.Application" Version="1.0.5" />
+      <PackageReference Include="NArchitecture.Core.Mailing" Version="1.0.2" />
+      <PackageReference Include="NArchitecture.Core.Mailing.MailKit" Version="1.0.2" />
+    </ItemGroup>
+
 </Project>

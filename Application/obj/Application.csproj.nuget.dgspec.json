@@ -37,6 +37,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.3.0, )"
+            },
+            "NArchitecture.Core.Application": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            },
+            "NArchitecture.Core.Mailing": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
+            "NArchitecture.Core.Mailing.MailKit": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
