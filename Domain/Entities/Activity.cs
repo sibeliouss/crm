@@ -2,7 +2,7 @@ using Core.Entities;
 
 namespace Domain.Entities;
 
-public class Activity: Entity<Guid>
+public class Activity: Entity
 {
     public Activity(
         Customer customer,
@@ -20,5 +20,6 @@ public class Activity: Entity<Guid>
 
     public Customer Customer { get; set; } = new Customer();
     public string Description { get; set; } = string.Empty;
+
  
 }

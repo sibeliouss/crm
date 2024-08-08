@@ -2,7 +2,7 @@ using Core.Entities;
 
 namespace Domain.Entities;
 
-public class Product : Entity<Guid>
+public class Product : Entity
 {
     public Product(
         string name,
