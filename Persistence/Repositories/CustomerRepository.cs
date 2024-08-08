@@ -1,3 +1,4 @@
+using Application.Features.Dtos;
 using Application.Repositories;
 using Domain.Entities;
 using Domain.Pages;
@@ -8,17 +9,17 @@ namespace Persistence.Repositories;
 
 public class CustomerRepository(BaseDbContext dbContext) : Repository<Customer>(dbContext), ICustomerRepository
 {
-    public async Task<IList<Customer>> ListAsync(CustomerCriteria criteria)
+    public async Task<IList<Customer>> ListAsync(CustomerDto criteria)
     {
         return await BuildQuery(criteria).ToListAsync();
     }
 
-    public async Task<IPagedList<Customer>> ListAsync(CustomerCriteria criteria, int pageSize, int pageNumber)
+    public async Task<IPagedList<Customer>> ListAsync(CustomerDto criteria, int pageSize, int pageNumber)
     {
         return await BuildQuery(criteria).ToListAsync(pageSize, pageNumber);
     }
 
-    protected IQueryable<Customer> BuildQuery(CustomerCriteria criteria)
+    protected IQueryable<Customer> BuildQuery(CustomerDto criteria)
     {
         var query = DbContext.Set<Customer>().AsQueryable();
 

@@ -1,3 +1,4 @@
+using Application.Features.Dtos;
 using Application.Repositories;
 using Domain.Entities;
 using Domain.Pages;
@@ -8,17 +9,17 @@ namespace Persistence.Repositories;
 
 public class ContactRepository(BaseDbContext dbContext) : Repository<Contact>(dbContext), IContactRepository
 {
-    public async Task<IList<Contact>> ListAsync(ContactCriteria criteria)
+    public async Task<IList<Contact>> ListAsync(ContactDto criteria)
     {
         return await BuildQuery(criteria).ToListAsync();
     }
 
-    public async Task<IPagedList<Contact>> ListAsync(ContactCriteria criteria, int pageSize, int pageNumber)
+    public async Task<IPagedList<Contact>> ListAsync(ContactDto criteria, int pageSize, int pageNumber)
     {
         return await BuildQuery(criteria).ToListAsync(pageSize, pageNumber);
     }
 
-    protected IQueryable<Contact> BuildQuery(ContactCriteria criteria)
+    protected IQueryable<Contact> BuildQuery(ContactDto criteria)
     {
         var query = DbContext.Set<Contact>().AsQueryable();
 

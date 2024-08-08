@@ -3,7 +3,7 @@ using Domain.Pages;
 
 namespace Application.Repositories;
 
-public interface IRepository<T> where T : class, IEntity
+public interface IRepository<T> where T : class
 {
     Task<T> CreateAsync(T entity);
     ValueTask<T> LoadAsync(Guid id);

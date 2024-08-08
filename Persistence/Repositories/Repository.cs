@@ -7,7 +7,7 @@ using Persistence.Contexts;
 namespace Persistence.Repositories;
 
 public abstract class Repository<T>(BaseDbContext dbContext) : IRepository<T>
-    where T : class, IEntity
+    where T : class
 {
     protected BaseDbContext DbContext { get; } = dbContext;
 
