@@ -8,7 +8,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Features\Customers\Commands\Create\" />
       <Folder Include="Features\Customers\Commands\Delete\" />
       <Folder Include="Features\Customers\Commands\Update\" />
       <Folder Include="Features\Customers\Queries\" />
