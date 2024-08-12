@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets/css/login.css"
     },
     {
-      "Id": "/Users/sozey/Projects/CRM/WMVC/wwwroot/css/site.scss",
-      "PackagePath": "staticwebassets/css/site.scss"
-    },
-    {
       "Id": "/Users/sozey/Projects/CRM/WMVC/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },
