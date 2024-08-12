@@ -1,0 +1,68 @@
+body {
+  background-color: rgba(68, 46, 87, 0.06);
+}
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow:0 0 10px 5px rgba(0, 0, 0, 0.2);
+
+  .box{
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px rgba(68, 46, 87, 0.49);
+  }
+  h4{
+    font-weight: bolder;
+    font-family: Arial, sans-serif;
+    color: rgba(46, 54, 69, 0.65);
+  }
+  .form-floating{
+    .form-control{
+      border: none;
+      box-shadow: 0 3px 0 0 rgba(55, 36, 234, 0.28);
+    }
+    .form-control:focus{
+      box-shadow: 0 0 10px 5px rgba(173, 173, 237, 0.49);
+    }
+  }
+  .form-check{
+    display: flex;
+    justify-content: center;
+    .form-check-input{
+      box-shadow: none;
+      border-bottom: 2px solid  rgba(55, 36, 234, 0.49);
+      margin-right: 10px;
+    }
+    .form-check-input:checked {
+      background-color: rgb(53, 53, 96);
+      border-color: rgba(173, 173, 237, 0.49);
+    }
+  }
+  .button{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .edit1{
+      box-shadow: 0 0 2px 2px rgba(50, 35, 62, 0.49);
+      width: 280px;
+      margin: auto;
+    }
+    .edit1:hover{
+      background-color: rgba(68, 46, 87, 0.49);
+    }
+    .edit1:focus{
+      background-color: rgba(68, 46, 87, 0.49);
+      box-shadow: 0 0 10px 5px rgba(173, 173, 237, 0.49);
+    }
+    .edit{
+      width: 100px;
+      margin: auto;
+      background-color: rgba(68, 46, 87, 0.49);
+    }
+    .edit:focus{
+      box-shadow: 0 0 10px 5px rgba(173, 173, 237, 0.49);
+    }
+  }
+}
