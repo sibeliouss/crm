@@ -12,6 +12,10 @@ public class BaseDbContext: IdentityDbContext<AppUser, AppRole, Guid>
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.Entity<Product>()
+            .Property(p => p.Price)
+            .HasPrecision(18, 2); 
+        
         builder.ApplyConfiguration(new CustomerConfiguration());
         builder.ApplyConfiguration(new ProductConfiguration());
         

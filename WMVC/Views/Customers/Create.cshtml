@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <style>
+        .container{
+            padding: 30px;
+            margin-top: 40px;
+            width: 580px;
+            .row{
+                .card{
+                    padding: 40px;
+                    box-shadow: 0 0 10px 5px rgba(173, 173, 237, 0.49);
+                    border-radius: 10px;
+                    /*border:  20px solid  rgba(68, 46, 87, 0.49);*/
+                    h5{
+                        font-family: Arial, sans-serif;
+                        
+                    }
+                    .button_container{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        button{
+                        background-color: rgba(68, 46, 87, 0.49);
+                        color: white;
+                    }
+                        button:focus{
+                            box-shadow: 0 0 10px 5px rgba(173, 173, 237, 0.49);
+                        }
+                    }
+                    input{
+                        box-shadow: none;
+                        border:  2px solid  rgba(68, 46, 87, 0.49);
+                    }
+                    input:focus{
+                        box-shadow: 0 0 10px 5px rgba(173, 173, 237, 0.49);
+                    }
+                   
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <main class="card mt-4 main-content">
+                <div>
+                    <div>
+                        <div>
+                            <div>
+                                <h5 style="text-align: center;">Yeni Müşteri Ekle</h5>
+                            </div>
+                            <div>
+                                <form asp-controller="Customers" asp-action="CreateCustomer" method="post" autocomplete="off">
+                                    <div class="mb-3">
+                                        <label for="nameInput" class="form-label">Ad Soyad:</label>
+                                        <input type="text" class="form-control" id="nameInput" name="Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="emailInput" class="form-label">Email:</label>
+                                        <input type="email" class="form-control" id="emailInput" name="Email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phoneInput" class="form-label">Telefon:</label>
+                                        <input type="tel" class="form-control" id="phoneInput" name="Phone" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="addressInput" class="form-label">Adres:</label>
+                                        <input type="text" class="form-control" id="addressInput" name="Address"
+                                            required>
+                                    </div>
+                                    <div class="button_container">
+                                        <button type="submit" class="btn">Kaydet</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
