@@ -7,7 +7,8 @@ namespace Application.Features.Customers.Commands.Create;
 
 public class CreateCustomerCommand : IRequest<Customer>
 {
-  public CreateCustomerCommand(string name, string email, string phone, string address)
+  public CreateCustomerCommand(){}
+  public CreateCustomerCommand(string name, string email, string phone, string address) :this()
   {
     Name = name;
     Email = email;

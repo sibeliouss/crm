@@ -1,0 +1,63 @@
+.start {
+  text-align: center;
+  background-color: rgba(68, 46, 87, 0.09) ;
+  padding: 100px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.73);
+  .welcome-box{
+    h1{
+      color: rgb(68, 46, 87);
+      margin-bottom: 40px;
+    }
+    a{
+      background-color:rgb(68, 46, 87);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+
+    }
+    a:hover{
+      background-color: rgb(173, 173, 237);
+      color: rgb(68, 46, 87);
+      box-shadow:0 0 10px 5px rgba(68, 46, 87, 0.82);
+    }
+
+  }
+}
+
+.container{
+  .main-content{
+    margin-right: 40px;
+    padding: 50px;
+    .card{
+      width: 270px;
+      height: 200px;
+      border: 2px solid rgba(68, 46, 87, 0.58);
+      color: rgb(60, 103, 186);
+      .card-body{
+        display: flex;
+        flex-direction: column;
+
+        .btn{
+          width: 100px;
+          margin-top: auto;
+          background-color: rgba(173, 173, 237, 0.53);
+          color: rgba(55, 36, 234, 0.99);
+          border: none;
+
+        }
+        .btn:hover{
+          background-color:  rgb(60, 103, 186) ;
+          color: white;
+        }
+      }
+
+    }
+    .card:hover{
+      box-shadow: 0 0 10px 5px rgba(173, 195, 237, 0.49);
+    }
+  }
+}

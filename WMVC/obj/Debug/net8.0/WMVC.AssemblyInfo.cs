@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97405ee8da425cf83769e2d9afce46dd2d30e547")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92cb78648155481036c5cd4abc61121f94146513")]
 [assembly: System.Reflection.AssemblyProductAttribute("WMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
