@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "/Users/sozey/Projects/CRM/WMVC/wwwroot/css/home.css",
+      "PackagePath": "staticwebassets/css/home.css"
+    },
+    {
       "Id": "/Users/sozey/Projects/CRM/WMVC/wwwroot/css/layout.css",
       "PackagePath": "staticwebassets/css/layout.css"
     },

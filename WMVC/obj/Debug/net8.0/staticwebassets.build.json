@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "cVBFZ9ddZPbO4rr4BvFJ3iy33L6hN6chvMKpUQ1SRBc=",
+  "Hash": "E4VnjJe8CnviB3rgCShoDRu/nqvCRmnmMiCfBt3s53A=",
   "Source": "WMVC",
   "BasePath": "_content/WMVC",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "/Users/sozey/Projects/CRM/WMVC/wwwroot/css/home.css",
+      "SourceId": "WMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/sozey/Projects/CRM/WMVC/wwwroot/",
+      "BasePath": "_content/WMVC",
+      "RelativePath": "css/home.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/home.css"
+    },
     {
       "Identity": "/Users/sozey/Projects/CRM/WMVC/wwwroot/css/layout.css",
       "SourceId": "WMVC",
