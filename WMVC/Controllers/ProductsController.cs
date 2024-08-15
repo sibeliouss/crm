@@ -30,7 +30,7 @@ public class ProductsController : Controller
                 $"PageSize exceeds the page size limit: {pageSizeLimit}", nameof(pageSize));
         }
 
-        var query = new ListCustomerQuery
+        var query = new ListProductQuery
         {
             Name = name,
             PageSize = pageSize,

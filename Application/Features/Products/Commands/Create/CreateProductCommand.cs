@@ -7,7 +7,7 @@ namespace Application.Features.Products.Commands.Create;
 
 public class CreateProductCommand : IRequest<Product>
 {
-   private CreateProductCommand()
+   public CreateProductCommand()
    {
    }
 
