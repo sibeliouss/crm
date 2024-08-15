@@ -21,7 +21,7 @@ public class CreateCustomerCommand : IRequest<Customer>
   public string Phone { get; set; }
   public string Address { get; set; }
   
-  public sealed class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, Customer>
+  public class CreateCustomerCommandHandler : IRequestHandler<CreateCustomerCommand, Customer>
   {
     private readonly IValidator<CreateCustomerCommand> _validator;
     private readonly ICustomerRepository _customerRepository;
