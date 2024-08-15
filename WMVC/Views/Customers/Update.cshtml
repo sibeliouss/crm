@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container-fluid{
+            .main-content{
+                padding: 30px;
+                margin: auto;
+                margin-right: 120px;
+                width: 800px;
+                .border{
+                  padding: 30px;
+                    box-shadow: 0 0 10px 5px rgba(173, 173, 237, 0.49);
+                    border-radius: 10px;
+                    font-family: Arial, sans-serif;
+                    input{
+                        box-shadow: none;
+                        border:  2px solid  rgba(68, 46, 87, 0.49);
+                    }
+                    input:focus{
+                        box-shadow: 0 0 10px 5px rgba(173, 173, 237, 0.49);
+                    }
+                    .button_container{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        button{
+                            background-color: rgba(68, 46, 87, 0.49);
+                            color: white;
+                        }
+                        button:focus{
+                            box-shadow: 0 0 10px 5px rgba(173, 173, 237, 0.49);
+                        }
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-5 main-content">
+            <div class="border">
+                <div>
+                    <div>
+                        <div>
+                            <h5 style="text-align: center;">Müşteri Bilgilerini Düzenle</h5>
+                        </div>
+                        <div>
+                            <form asp-action="Update" method="post" autocomplete="off">
+                                <div class="mb-3">
+                                    <label for="Name" class="form-label">Ad Soyad:</label>
+                                    <input type="text" class="form-control" id="Name" name="Name"
+                                           value="@Model.Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Email" class="form-label">Email:</label>
+                                    <input type="email" class="form-control" id="Email" name="Email"
+                                           value="@Model.Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Phone" class="form-label">Telefon:</label>
+                                    <input type="text" class="form-control" id="Phone" name="Phone"
+                                           value="@Model.Phone" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="Address" class="form-label">Adres</label>
+                                    <input type="text" class="form-control" id="Address" name="Address"
+                                           value="@Model.Address" required>
+                                </div>
+                                <input type="hidden" name="CustomerId" value="@Model.CustomerId"/>
+                                <div class="button_container">
+                                    <button type="submit" class="btn">Kaydet</button>  
+                                </div>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
