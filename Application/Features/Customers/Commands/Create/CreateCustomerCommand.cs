@@ -43,7 +43,6 @@ public class CreateCustomerCommand : IRequest<Customer>
             await _validator.ValidateAndThrowAsync(command, cancellationToken);
             
             var customer = _mapper.Map<Customer>(command);
-
             await _customerRepository.CreateAsync(customer);
             customer = await _customerRepository.LoadAsync(customer.Id);
 

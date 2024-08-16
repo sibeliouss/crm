@@ -22,7 +22,6 @@ public static class PersistenceServiceRegistration
       services.AddScoped<IActivityRepository, ActivityRepository>();
       services.AddScoped<IContactRepository, ContactRepository>();
       services.AddScoped<ICustomerRepository, CustomerRepository>();
-      services.AddScoped<ILeadRepository, LeadRepository>();
       services.AddScoped<IOpportunityRepository, OpportunityRepository>();
       services.AddScoped<IProductRepository, ProductRepository>();
 

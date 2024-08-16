@@ -12,7 +12,7 @@ using Persistence.Contexts;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(BaseDbContext))]
-    [Migration("20240813092010_Initial")]
+    [Migration("20240816110927_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -190,6 +190,7 @@ namespace Persistence.Migrations
                         .HasColumnType("nvarchar(128)");
 
                     b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<int>("Quantity")

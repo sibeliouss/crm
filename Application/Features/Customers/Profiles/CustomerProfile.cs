@@ -1,4 +1,5 @@
 using Application.Features.Customers.Commands.Create;
+using Application.Features.Customers.Commands.Update;
 using AutoMapper;
 using Domain.Entities;
 using Application.Features.Dtos;
@@ -11,7 +12,6 @@ public class CustomerProfile : Profile
     public CustomerProfile()
     {
         CreateMap<CreateCustomerCommand, Customer>().ReverseMap();
-
-
+        CreateMap<UpdateCustomerCommand, Customer>().ReverseMap();
     }
 }

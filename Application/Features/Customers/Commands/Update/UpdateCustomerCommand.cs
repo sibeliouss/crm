@@ -1,4 +1,5 @@
 using Application.Repositories;
+using AutoMapper;
 using FluentValidation;
 using MediatR;
 
@@ -16,11 +17,14 @@ public class UpdateCustomerCommand : IRequest
     {
         private readonly IValidator<UpdateCustomerCommand> _validator;
         private readonly ICustomerRepository _customerRepository;
+        private readonly IMapper _mapper;
 
         public UpdateCustomerCommandHandler(
             IValidator<UpdateCustomerCommand> validator,
-            ICustomerRepository customerRepository)
+            ICustomerRepository customerRepository, IMapper mapper)
+
         {
+            _mapper = mapper;
             _validator = validator;
             _customerRepository = customerRepository;
         }
@@ -30,11 +34,7 @@ public class UpdateCustomerCommand : IRequest
             await _validator.ValidateAndThrowAsync(command, cancellationToken);
 
             var customer = await _customerRepository.LoadAsync(command.CustomerId);
-
-            customer.Name = command.Name;
-            customer.Email = command.Email;
-            customer.Phone = command.Phone;
-            customer.Address = command.Address;
+            _mapper.Map(command, customer);
             customer.UpdateDate = DateTime.UtcNow;
 
             await _customerRepository.UpdateAsync(customer);
