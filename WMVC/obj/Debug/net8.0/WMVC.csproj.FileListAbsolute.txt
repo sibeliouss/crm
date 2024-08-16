@@ -156,3 +156,5 @@
 /Users/sozey/Projects/CRM/WMVC/obj/Debug/net8.0/WMVC.pdb
 /Users/sozey/Projects/CRM/WMVC/obj/Debug/net8.0/WMVC.genruntimeconfig.cache
 /Users/sozey/Projects/CRM/WMVC/obj/Debug/net8.0/ref/WMVC.dll
+/Users/sozey/Projects/CRM/WMVC/bin/Debug/net8.0/AutoMapper.dll
+/Users/sozey/Projects/CRM/WMVC/bin/Debug/net8.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll

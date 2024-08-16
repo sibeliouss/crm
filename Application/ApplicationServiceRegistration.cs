@@ -1,3 +1,4 @@
+using Application.Features.Customers.Profiles;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,5 +11,6 @@ public static class ApplicationServiceRegistration
         var assembly = typeof(ApplicationServiceRegistration).Assembly;
         services.AddMediatR(config => config.RegisterServicesFromAssembly(assembly));
         services.AddValidatorsFromAssembly(assembly);
+        services.AddAutoMapper(typeof(CustomerProfile));
     }
 }

@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "kYm8aXtO2kY=",
+  "dgSpecHash": "/I1JMZwpJrl/Che4d8tj4b0taeeX5GByQz73wu2ZGjRL6PdB1zq9GPsEaz0esyUHqvqkmlKajG61KzkaD93Oug==",
   "success": true,
   "projectFilePath": "/Users/sozey/Projects/CRM/Application/Application.csproj",
   "expectedPackageFiles": [
+    "/Users/sozey/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
+    "/Users/sozey/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "/Users/sozey/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/sozey/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
     "/Users/sozey/.nuget/packages/fluentvalidation/11.9.2/fluentvalidation.11.9.2.nupkg.sha512",
@@ -18,7 +20,7 @@
     "/Users/sozey/.nuget/packages/microsoft.aspnetcore.identity.entityframeworkcore/8.0.6/microsoft.aspnetcore.identity.entityframeworkcore.8.0.6.nupkg.sha512",
     "/Users/sozey/.nuget/packages/microsoft.aspnetcore.webutilities/2.2.0/microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "/Users/sozey/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "/Users/sozey/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",
+    "/Users/sozey/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
     "/Users/sozey/.nuget/packages/microsoft.data.sqlclient/5.1.5/microsoft.data.sqlclient.5.1.5.nupkg.sha512",
     "/Users/sozey/.nuget/packages/microsoft.data.sqlclient.sni.runtime/5.1.1/microsoft.data.sqlclient.sni.runtime.5.1.1.nupkg.sha512",
     "/Users/sozey/.nuget/packages/microsoft.entityframeworkcore/8.0.6/microsoft.entityframeworkcore.8.0.6.nupkg.sha512",
