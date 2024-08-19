@@ -1,4 +1,5 @@
 using Application.Repositories;
+using Domain.Entities;
 using FluentValidation;
 using MediatR;
 
@@ -31,13 +32,16 @@ public class UpdateProductCommand: IRequest
 
    var product = await _productRepository.LoadAsync(command.ProductId);
 
-   product.Name = command.Name;
-   product.Price = command.Price;
-   product.Quantity = command.Quantity;
-   product.Description = command.Description;
-   product.UpdateDate = DateTime.UtcNow;
+   if (product != null)
+   {
+    product.Name = command.Name;
+    product.Price = command.Price;
+    product.Quantity = command.Quantity;
+    product.Description = command.Description;
+    product.UpdateDate = DateTime.UtcNow;
 
-   await _productRepository.UpdateAsync(product);
+    await _productRepository.UpdateAsync(product);
+   }
   }
  }
 }

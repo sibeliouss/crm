@@ -22,7 +22,6 @@ public class BaseDbContext: IdentityDbContext<AppUser, AppRole, Guid>
         builder.ApplyConfiguration(new ProductConfiguration());
         
         builder.Ignore<Activity>();
-        builder.Ignore<Contact>();
         builder.Ignore<Opportunity>();
 
         builder.Ignore<IdentityUserLogin<Guid>>();

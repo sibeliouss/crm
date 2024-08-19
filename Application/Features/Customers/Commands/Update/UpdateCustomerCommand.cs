@@ -1,5 +1,6 @@
 using Application.Repositories;
 using AutoMapper;
+using Domain.Entities;
 using FluentValidation;
 using MediatR;
 
@@ -35,9 +36,12 @@ public class UpdateCustomerCommand : IRequest
 
             var customer = await _customerRepository.LoadAsync(command.CustomerId);
             _mapper.Map(command, customer);
-            customer.UpdateDate = DateTime.UtcNow;
+            if (customer != null)
+            {
+                customer.UpdateDate = DateTime.UtcNow;
 
-            await _customerRepository.UpdateAsync(customer);
+                await _customerRepository.UpdateAsync(customer);
+            }
         }
     } 
 }

@@ -1,4 +1,5 @@
 using Application.Repositories;
+using Domain.Entities;
 using MediatR;
 
 namespace Application.Features.Customers.Commands.Delete;
@@ -19,7 +20,7 @@ public class DeleteCustomerCommand : IRequest
       public async Task Handle(DeleteCustomerCommand command, CancellationToken cancellationToken)
       {
          var customer = await _customerRepository.LoadAsync(command.CustomerId);
-         await _customerRepository.DeleteAsync(customer);
+         if (customer != null) await _customerRepository.DeleteAsync(customer);
       }
    }
    

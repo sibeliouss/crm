@@ -20,7 +20,6 @@ public static class PersistenceServiceRegistration
       services.AddIdentityCore<AppUser>().AddEntityFrameworkStores<BaseDbContext>();
       
       services.AddScoped<IActivityRepository, ActivityRepository>();
-      services.AddScoped<IContactRepository, ContactRepository>();
       services.AddScoped<ICustomerRepository, CustomerRepository>();
       services.AddScoped<IOpportunityRepository, OpportunityRepository>();
       services.AddScoped<IProductRepository, ProductRepository>();

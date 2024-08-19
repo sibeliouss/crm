@@ -38,7 +38,7 @@ public class CreateCustomerCommand : IRequest<Customer>
             _mapper = mapper;
         }
 
-        public async Task<Customer> Handle(CreateCustomerCommand command, CancellationToken cancellationToken)
+        public async Task<Customer?> Handle(CreateCustomerCommand command, CancellationToken cancellationToken)
         {
             await _validator.ValidateAndThrowAsync(command, cancellationToken);
             

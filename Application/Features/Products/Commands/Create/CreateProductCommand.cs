@@ -37,7 +37,7 @@ public class CreateProductCommand : IRequest<Product>
          _productRepository = productRepository;
       }
 
-      public async Task<Product> Handle(CreateProductCommand command, CancellationToken cancellationToken)
+      public async Task<Product?> Handle(CreateProductCommand command, CancellationToken cancellationToken)
       {
          await _validator.ValidateAndThrowAsync(command, cancellationToken);
 

@@ -28,6 +28,13 @@ public abstract class Repository<T>(BaseDbContext dbContext) : IRepository<T>
     {
         return await DbContext.Set<T>().FindAsync(id);
     }
+    
+    public virtual async ValueTask<T?> LoadAsync(Guid id)
+    {
+        var entity = await GetAsync(id);
+        
+        return entity;
+    }
 
     public virtual async Task<IList<T>> ListAsync()
     {
@@ -39,17 +46,7 @@ public abstract class Repository<T>(BaseDbContext dbContext) : IRepository<T>
         return await DbContext.Set<T>().ToListAsync(pageSize, pageNumber);
     }
 
-    public virtual async ValueTask<T> LoadAsync(Guid id)
-    {
-        var entity = await GetAsync(id);
-
-        if (entity == null)
-        {
-            throw new EntityNotFoundException(typeof(T), id);
-        }
-
-        return entity;
-    }
+  
 
     public virtual async Task UpdateAsync(T entity)
     {

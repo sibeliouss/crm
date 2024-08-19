@@ -15,9 +15,11 @@ public class CustomerConfiguration : IEntityTypeConfiguration<Customer>
         builder.Property(c => c.Address).HasMaxLength(256);
         builder.Property(c => c.CreateDate).HasDefaultValueSql("GETDATE()").ValueGeneratedOnAdd();
         builder.Property(c => c.UpdateDate).HasDefaultValueSql("GETDATE()").ValueGeneratedOnUpdate();
+        /*
         builder.HasMany(c => c.Contacts).WithOne().HasForeignKey("CustomerId").OnDelete(DeleteBehavior.Cascade);// bir Customer kaydı silindiğinde, bu Customer ile ilişkili olan tüm Contact kayıtları da otomatik olarak silinir. 
         builder.HasMany(c => c.Opportunities).WithOne().HasForeignKey("CustomerId").OnDelete(DeleteBehavior.Cascade);
         builder.HasMany(c => c.Activities).WithOne().HasForeignKey("CustomerId").OnDelete(DeleteBehavior.Cascade);
+        */
 
     }
 }
