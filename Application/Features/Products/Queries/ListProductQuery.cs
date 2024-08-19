@@ -1,3 +1,4 @@
+using Application.Features.Dtos;
 using Application.Repositories;
 using Domain.Entities;
 using Domain.Pages;
@@ -23,7 +24,7 @@ public class ListProductQuery : IRequest<IPagedList<Product>>
 
       public Task<IPagedList<Product>> Handle(ListProductQuery query, CancellationToken cancellationToken)
       {
-         var criteria = new ProductCriteria()
+         var criteria = new ProductDto()
          {
             Name = query.Name,
          };

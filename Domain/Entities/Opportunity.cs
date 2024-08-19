@@ -22,6 +22,6 @@ public class Opportunity : Entity
     public Customer Customer { get; set; } = new Customer();
     public string Description { get; set; } = string.Empty;
     public decimal Value { get; set; }
-    public DateTime CloseDate { get; set; }
+    
    
 }
